@@ -1,0 +1,22 @@
+this app will provide the option to add class dynamically through run time
+
+1. run this program
+2. add new java file to "register" directory:
+ copy the file "RegisterImpl3" and past it in the same directory,change the name to: "RegisterImpl4"
+3. on maven window open Lifecycle -> right click on "install" -> select "run maven build"
+this will add "RegisterImpl4" to target
+
+
+4. on postman : POST : http://localhost:8080/regbean
+Body:
+{
+  "beanName": "RegisterImpl4",
+  "beanClassRelativePath": "com.example.demo.register.RegisterImpl4"
+}
+
+you will get this error:
+org.springframework.beans.factory.NoSuchBeanDefinitionException:
+ No qualifying bean of type 'com.example.demo.register_list.ListClass' available:
+ expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+
+
